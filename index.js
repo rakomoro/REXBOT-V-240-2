@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const login = require("./fca-unofficial");
+const loggingin = require("./fca-unofficial/src/fca")
 const fs = require("fs");
 const detectTyping = require("./handle/detectTyping");
 const autoReact = require("./handle/autoReact");
@@ -12,23 +13,10 @@ const configPath = path.join(__dirname, "config.json");
 const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 
 const PORT = process.env.PORT || 3000;
-const EXPECTED_CREDIT = "Joshua Apostol";
-const EXPECTED_VERSION = "2.4.0";
-
-if (config.credit !== EXPECTED_CREDIT) {
-  console.error(`Error: Credit has been modified! Current value: ${config.credit}`);
-  console.error("Changing the credit is forbidden. Fix the config to continue.");
-  process.exit(1);
-}
-
-if (config.version !== EXPECTED_VERSION) {
-  console.error(`Error: Outdated version detected! Current version: ${config.version}`);
-  console.error("Only version 2.4.0 is allowed. Update or revert the version to continue.");
-  process.exit(1);
-}
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
+loggingin();
 
 global.NashBoT = {
   commands: new Map(),
