@@ -24,7 +24,7 @@ module.exports = {
             }
 
             api.sendMessage(
-                `🤖 AI Response\n━━━━━━━━━━━━━━━━━━━\n${result}\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
+                `€•★🅡🅔🅧🅑🅞🅣—AI Response\n━━━━━━━━━━━━━━━━━━━\n${result}\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
                 event.threadID,
                 event.messageID
             );
