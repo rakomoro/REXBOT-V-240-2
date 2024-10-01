@@ -28,7 +28,7 @@ global.NashBot = {
   ENDPOINT: "https://nash-rest-api-production.up.railway.app/",
   END: "https://deku-rest-api.gleeze.com/",
   KEN: "https://api.kenliejugarap.com/",
-  MONEY: "https://database2.vercel.app/",
+  MONEY: "https://frizzyelectricclients-production.up.railway.app/",
 };
 
 const loadModules = (type) => {
