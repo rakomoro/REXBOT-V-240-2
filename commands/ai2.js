@@ -32,8 +32,8 @@ module.exports = {
 
         api.sendMessage(
             "[ 𝙲𝙾𝙽𝚅𝙴𝚁𝚂𝙰𝚃𝙸𝙾𝙽𝙰𝙻 𝙰𝙸 ]\n\n" +
-            "⏳ Searching for answer..." +
-            '\n\n[ 𝚃𝚢𝚙𝚎 "𝚌𝚕𝚎𝚒𝚛" 𝚝𝚘 𝚛𝚎𝚜𝚎𝚝 𝚝𝚑𝚎 𝚌𝚘𝚗𝚟𝚎𝚛𝚜𝚎𝚜𝚜𝚒𝚘𝚟𝚎 𝚠𝚒𝚝𝚑 𝙰𝙸 ]',
+            "🔍 Searching for answer...📖" +
+            '\n\n[ 𝚃𝚢𝚙𝚎 "/help" 𝚝𝚘 see all commands ]',
             threadID,
             async (err, info) => {
                 if (err) return;
@@ -42,7 +42,7 @@ module.exports = {
                     api.editMessage(
                         "[ 𝙲𝙾𝙽𝚅𝙴𝚁𝚂𝙰𝚃𝙸𝙾𝙽𝙰𝙻 𝙰𝙸 ]\n\n" +
                         response +
-                        "\n\n[ 𝚁𝙀𝙋𝙇𝚈 𝚃𝙾 𝚃𝙷𝙸𝚂 𝙼𝙀𝚂𝚂𝙰𝙶𝙴 𝚃𝙾 𝙲𝙾𝙽𝚃𝙸𝙽𝚄𝙴 𝚃𝙷𝙴 𝙲𝙾𝙽𝚅𝙴𝚁𝚂𝙰𝚃𝙸𝙾𝙽 𝚆𝙸𝚃𝙷 𝙰𝙸 ]\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.",
+                        "\n\n[ 📜Important notice bot is not for Sale if someone sale it please report it ]\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.",
                         info.messageID
                     );
                     global.handle.replies[info.messageID] = {
@@ -53,7 +53,7 @@ module.exports = {
                         mid: messageID,
                     };
                 } catch (g) {
-                    api.sendMessage("Error processing your request: " + g.message, threadID);
+                    api.sendMessage("⚠️Error processing your request: " + g.message, threadID);
                 }
             },
             messageID
