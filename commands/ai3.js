@@ -26,7 +26,7 @@ module.exports = {
         const { threadID, messageID, senderID } = event;
         const message = args.join(" ");
 
-        if (!message) return api.sendMessage("Please provide your question.\n\nExample: ai What is the solar system?", threadID, messageID);
+        if (!message) return api.sendMessage("Please provide your question.\n\nExample: ai What is the solar system? if this error please use other Ai like Ai2, Ai3, Ai4, Ai5", threadID, messageID);
 
         api.sendMessage(
             "🔎 Searching for an answer. Please wait...",
@@ -49,20 +49,20 @@ module.exports = {
                                     info.messageID
                                 );
                             } else {
-                                return api.sendMessage("🤖 Failed to recognize the image.", threadID, messageID);
+                                return api.sendMessage("€•★🅡🅔🅧🅑🅞🅣 Failed to recognize the image.", threadID, messageID);
                             }
                         }
                     }
 
                     const response = await gptConvoAPI(message, senderID);
                     api.editMessage(
-                        `𝗖𝗛𝗔𝗧𝗚𝗣𝗧\n━━━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━━━\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
+                        `€•★🅡🅔🅧🅑🅞🅣𝗖𝗛𝗔𝗧𝗚𝗣𝗧\n━━━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━━━\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
                         info.messageID,
                         threadID,
                         messageID
                     );
                 } catch (error) {
-                    api.sendMessage("An error occurred while processing your request.", threadID, messageID);
+                    api.sendMessage("⚠️An error occurred while processing your request.", threadID, messageID);
                 }
             },
             messageID
