@@ -15,7 +15,8 @@ module.exports = {
 3.Stay on topic: Keep discussions relevant to the group’s purpose.
 4.No personal information: Do not share personal details of yourself or others without permission.
 5.Follow the group’s purpose: Ensure your messages contribute to the educational or informational goals of the group.
-6.Report issues: If you encounter any issues or have concerns, contact a group admin. or Jurex Aso for more information or action
+6.Autokick: if someone underestimate the rules and seen by admin will be automatedly kick with admin
+7.Report issues: If you encounter any issues or have concerns, contact a group admin. or Jurex Aso for more information or action
         `;
 
         api.sendMessage(rules, threadID, messageID);
