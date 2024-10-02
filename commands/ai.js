@@ -20,11 +20,11 @@ module.exports = {
             const result = response.data.result.reply;
 
             if (!result) {
-                throw new Error('No valid response received from the API.');
+                throw new Error('⚠️No valid response received from the API.');
             }
 
             api.sendMessage(
-                `€•★🅡🅔🅧🅑🅞🅣—AI Response\n━━━━━━━━━━━━━━━━━━━\n${result}\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
+                `🔍€•★🅡🅔🅧🅑🅞🅣—AI¹ Response⏳\n━━━━━━━━━━━━━━━━━━━\n${result}\n\nHow to unsend a message?, react to it with a thumbs up (👍). If you are the sender, the bot will automatically unsend the message.`,
                 event.threadID,
                 event.messageID
             );
